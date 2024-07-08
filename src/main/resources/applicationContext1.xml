@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean id="head1"
+        class="com.hakimov.hydra.Head" scope="prototype">
+        <property name="countOfEyes" value="3"/>
+        <property name="countOfEars" value="2"/>
+    </bean>
+
+    <bean id="head2"
+          class="com.hakimov.hydra.Head" scope="prototype">
+        <property name="countOfEyes" value="1"/>
+        <property name="countOfEars" value="4"/>
+    </bean>
+
+    <bean id="head3"
+          class="com.hakimov.hydra.Head" scope="prototype">
+        <property name="countOfEyes" value="8"/>
+        <property name="countOfEars" value="1"/>
+    </bean>
+
+    <bean id="hydra"
+          class="com.hakimov.hydra.Hydra" scope="singleton">
+        <constructor-arg value="Hydraa"/>
+        <constructor-arg name="listOfHeads">
+            <list>
+                <ref bean="head1"/>
+                <ref bean="head2"/>
+                <ref bean="head3"/>
+            </list>
+        </constructor-arg>
+        
+    </bean>
+
+
+
+
+</beans>
