@@ -10,11 +10,14 @@ public class Main {
         );
 
 
+
         Hydra hydra = context.getBean("hydra", Hydra.class);
 
         hydra.showHydra();
 
         System.out.println(Hydra.counter);
+        
+        context.close();
 
 
 
