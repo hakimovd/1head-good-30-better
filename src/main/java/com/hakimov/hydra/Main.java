@@ -2,8 +2,6 @@ package com.hakimov.hydra;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -13,8 +11,11 @@ public class Main {
 
 
         Hydra hydra = context.getBean("hydra", Hydra.class);
+        Hydra hydra11 = context.getBean("hydra", Hydra.class);
 
         hydra.showHydra();
+
+        System.out.println(Hydra.counter);
 
 
 

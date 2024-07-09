@@ -6,6 +6,7 @@ import java.util.List;
 public class Hydra {
 
     private static Hydra hydra;
+    public static int counter = 0;
 
     private String name;
     private List<Head> listOfHeads = new ArrayList<>();
@@ -13,7 +14,9 @@ public class Hydra {
     private Hydra(String name, List<Head> listOfHeads) {
             this.name = name;
             this.listOfHeads = listOfHeads;
+            counter++;
     }
+
 
 
 
