@@ -11,7 +11,6 @@ public class Main {
 
 
         Hydra hydra = context.getBean("hydra", Hydra.class);
-        Hydra hydra11 = context.getBean("hydra", Hydra.class);
 
         hydra.showHydra();
 
